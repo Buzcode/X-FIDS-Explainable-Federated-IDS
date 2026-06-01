@@ -44,7 +44,7 @@ To decode the "black-box" decisions of the decentralized global model, we implem
 * **Destination Port** and **Total Length of Backward Packets** hold the highest global feature importance.
 * Highly anomalous forward packet variance (**Forward Packet Length Std**) strongly pushes predictions toward the malicious **DDoS** class, providing immediate, diagnostic transparency to security analysts.
 
-![SHAP Feature Importance](images/shap_summary.png)
+![SHAP Feature Importance](shap_explanation.png)
 
 ---
 

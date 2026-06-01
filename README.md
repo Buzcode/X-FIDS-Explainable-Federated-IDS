@@ -44,7 +44,6 @@ To decode the "black-box" decisions of the decentralized global model, we implem
 * **Destination Port** and **Total Length of Backward Packets** hold the highest global feature importance.
 * Highly anomalous forward packet variance (**Forward Packet Length Std**) strongly pushes predictions toward the malicious **DDoS** class, providing immediate, diagnostic transparency to security analysts.
 
-*Add your SHAP beeswarm summary plot image here:*
 ![SHAP Feature Importance](images/shap_summary.png)
 
 ---
@@ -53,46 +52,48 @@ To decode the "black-box" decisions of the decentralized global model, we implem
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/X-FIDS-Explainable-Federated-IDS.git
+git clone https://github.com/Buzcode/X-FIDS-Explainable-Federated-IDS.git
 cd X-FIDS-Explainable-Federated-IDS
+
 2. Install dependencies:
-code
-Bash
+
 pip install -r requirements.txt
+
 3. Run the Simulation:
-Step 1: Partition the Dataset
-Generate the 
-K
-=
-5
-K=5
- decentralized client partitions from the raw CIC-IDS2017 dataset.
-code
-Bash
-python src/data_partition.py
-Step 2: Start the Flower Server
-code
-Bash
-python src/server.py
-Step 3: Launch Clients (Open separate terminals for each simulated node)
-code
-Bash
-python src/client.py --client_id=1
-python src/client.py --client_id=2
-# Repeat up to client_id=5
-Step 4: Generate SHAP Explanations
-code
-Bash
-python src/shap_explainer.py
+
+  - Step 1: Partition the Dataset
+    Generate the K=5 decentralized client partitions from the raw CIC-IDS2017
+    dataset.
+
+    python src/data_partition.py
+
+  - Step 2: Start the Flower Server
+
+    python src/server.py
+
+  - Step 3: Launch Clients (Open separate terminals for each simulated node)
+
+    python src/client.py --client_id=1
+    python src/client.py --client_id=2
+    # Repeat up to client_id=5
+
+  - Step 4: Generate SHAP Explanations
+
+    python src/shap_explainer.py
+
 📜 Citation
+
 If you use this code or research in your work, please cite our paper:
-code
-Bibtex
+
 @inproceedings{mawa2026explainable,
   title={Explainable Federated Learning for Cloud Intrusion Detection},
   author={Mawa, Jannatul and Zerin, Sumona Islam},
   booktitle={Proceedings of the IEEE International Conference on Signal Processing, Information, Communication and Systems (SPICSCON)},
   year={2026}
 }
+
 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This project is licensed under the MIT License - see the LICENSE file for
+details.
+
